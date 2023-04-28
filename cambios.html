@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            margin-left: 10%;
+        }
+        .cuadro{
+            height: 300px;
+            width: 300px;
+            border: 5px solid;
+        }
+        input:not(#cambiar) {
+            width: 310px;
+            margin: 0% 0% 0% 10%;
+        }
+        #cambiar{
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cambiar el texto -->
+    <h1>CAMBIO EL TEXTO</h1>
+    <p class="texto">Hola mundo</p>
+    <input type="text" name="cambio-texto" id="cambio-texto" placeholder="Digite un color o radio">
+    <!-- Cambiar cuadrado -->
+    <p class="cuadro" ></p>
+    <input type="text" name="cambio-cuadro" id="cambio-cuadro" placeholder="Digite un color o radio">
+    <!-- Cambiar color --> 
+        <p class="cuadro" id="cuadroColor"></p>
+        <label for="rojo">Rojo</label>
+        <input type="range" name="rojo" id="rojo" min="0" max="255" value="0"> <br>
+        <label for="verde">Verde</label>
+        <input type="range" name="verde" id="verde" min="0" max="255" value="0"> <br>
+        <label for="azul">Azul</label>
+        <input type="range" name="azul" id="azul" min="0" max="255" value="0"> <br>
+        <input type="button" name="cambiar" id="cambiar" value="Cambiar">
+
+    
+    <script>
+        //comentarios. script para javascript en el html, dentro del body
+        //texto
+        texto = document.querySelector("p.texto") //querySelector, para buscar clase y id
+        campoTexto = document.getElementById("cambio-texto")
+        campoTexto.addEventListener("input", () => {
+            texto.style.fontSize = campoTexto.value;
+            texto.style.color = campoTexto.value;
+        })
+        //cuadro
+        cuadro = document.querySelector("p.cuadro");
+        campoCuadro = document.getElementById("cambio-cuadro")
+        campoCuadro.addEventListener("input", () => {
+            cuadro.style.borderRadius = campoCuadro.value;
+            cuadro.style.background = campoCuadro.value;
+        })
+        //color
+        campoBoton = document.getElementById("cambiar");
+        campoBoton.addEventListener("click", () => {
+            rojo = document.getElementById("rojo").value;
+            verde = document.getElementById("verde").value;
+            azul = document.getElementById("azul").value;
+            cuadro = document.getElementById("cuadroColor");
+            cuadro.style.background = `rgb(${rojo},${verde},${azul}`;
+        })
+    </script>
+</body>
+</html>

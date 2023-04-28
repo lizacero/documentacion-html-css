@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seccionamiento de html5</title>
+    <!-- iconos de Font Awesome 4 Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- estilos -->
+    <style>
+        /* el >* significa que para todos sus hijos, not que no lo incluya */
+        body>*:not(.no-seccion){
+            border: 5px solid goldenrod;
+        }
+        section{
+            display: inline-block;
+            background-color: darksalmon;
+            text-align: justify;
+            width: 70%;
+        }
+        h1{
+            text-align: center;
+        }
+        aside{
+            display: inline-block;
+            width: 28.18%;
+            padding-top: 16.1%;
+        }
+        .frontend{
+            background-color: antiquewhite;
+        }
+        .backend{
+            background-color: bisque;
+        }
+        .fullstack{
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div permite seccionar para que al momento de aplicar un estilo en css sea más fácil aplicar los estilos por secciones -->
+    <div class="no-seccion">
+        <h1>Primer maquetado de un sitio web</h1>
+        <p>Permite darle estructura a tu sitio web, ayudando a los navegadores a identificar el contenido de la página</p>
+    </div>
+    <header>
+        <img src="img/offline.png" alt="logo" width="330" height="180">
+        <h1>Curso de desarrollo web en backend</h1>
+        <!-- nav>a*3 es un atajo para crear varios href -->
+        <!-- nav#navegacion.seccion>a*3 -->
+        <nav id="navegacion" class="seccion">
+            <a href="seccionamiento.html#navegacion">Primera clase</a>
+            <a href="seccionamiento.html#navegacion">Segunda clase</a>
+            <a href="seccionamiento.html#navegacion">Tercera clase</a>
+        </nav>
+    </header>
+    <article>
+        <h1>Los lenguajes de programación para el desarrollo</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident error doloribus quisquam. Minus aliquid architecto, consectetur,
+            vitae cupiditate assumenda ea voluptatum facilis sunt, enim exercitationem perspiciatis dolores. Voluptatibus, quibusdam suscipit.</p>
+    </article>
+    <section>
+        <h1>Desarrollo web</h1>
+        <div class="frontend">
+            <h3>Frontend</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus quibusdam sequi tempore totam. Iusto odio 
+                dolorem dignissimos eveniet minima. Quasi corporis doloribus eum ipsam, quae tenetur sint culpa obcaecati.</p>
+        </div>
+        <div class="backend">
+            <h3>Backend</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti assumenda commodi quisquam ipsa, dicta numquam facere 
+                tenetur nesciunt? Nihil, quis! Nam possimus nostrum facilis dolore delectus doloremque repellat ab sunt.</p>
+        </div>
+        <div class="fullstack">
+            <h3>Fullstack</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident cupiditate ut facilis quis temporibus magni
+                modi quibusdam, cum laborum ad voluptas rerum voluptates tempore autem? Vitae ducimus quibusdam eos!</p>
+        </div>
+    </section>
+    <aside>
+        <h1>Otros cursos</h1>
+        <ul>
+            <li>Marketing Digital</li>
+            <li>Ciberseguridad</li>
+            <li>Analisis de datos</li>
+        </ul>
+    </aside>
+    <footer>
+        <a href="https://es-la.facebook.com/"><i class="fa fa-facebook-official">Facebook</i></a>
+        <a href="https://www.youtube.com/"><i class="fa fa-youtube-square">Youtube</i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram">Instagram</i></a>
+        <p>© Todos los derechos al curso de backend - 2023</p>
+    </footer>
+</body>
+</html>

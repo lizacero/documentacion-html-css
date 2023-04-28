@@ -1,0 +1,121 @@
+body{
+    /* !important para que sea este backgroud el que lea, por ejemplo y no el del html */
+    background-color: antiquewhite !important;
+    border: 1px solid black;
+}
+p{
+    color: black;
+}
+.varios{
+    color: brown;
+}
+#unico{
+    color: blue;
+}
+#familia{
+    font-family: "Sofia";
+}
+#texto{
+    font-family: "Alkatra";
+    font-size: 30px;
+    color: violet;
+}
+.subrayado{
+    text-decoration: underline;
+}
+.encimatexto{
+    text-decoration: overline;
+}
+.tachado{
+    text-decoration: line-through;
+}
+.varios-decorados{
+    text-decoration: underline overline dashed pink;
+}
+.enlace{
+    text-decoration: none;
+    color: black;
+}
+.minusculas{
+    text-transform: lowercase;
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+.capitalizacion{
+    text-transform: capitalize;
+}
+img{
+    width: 700px;
+    height: 300px;
+    object-fit: fill;
+    object-fit: contain;
+    object-fit: scale-down;
+    object-fit: cover;
+    object-fit: none;
+}
+.estilo{
+    filter: blur(5px);
+    filter: brightness(150%);
+    filter: contrast(25%);
+    filter: grayscale(50%);
+    filter: hue-rotate(240deg);
+    filter: saturate(150%);
+    filter: invert(100%);
+    filter:opacity(50%);
+    filter: sepia(50%);
+}
+.espaciado{
+    text-indent: 50px;
+    word-spacing: 10px;
+    letter-spacing: 0.5px;
+    line-height: 2.0;
+    text-align: justify;
+}
+/* Modelo caja */
+#padre{
+    background-color: lightcyan;
+    width: 700px;
+}
+#hijo{
+    background-color: lightcoral;
+    width: 100%;
+    max-width: 300px;
+    /* relleno */
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    /* aplica a todos */
+    padding: 30px;
+    /* (arriba abajo)(izquierda derecha) */
+    padding: 20px 40px;
+    /* arriba derecha abajo izquiera */
+    padding: 10px 30px 15px 40px;
+    /* solo izq der */
+    padding-inline: 10px;
+    /* solo arriba abajo */
+    padding-block: 30px;
+    /* borde */
+    border-color: blanchedalmond;
+    border-style: double;
+    border-width: 10px;
+    /* tamaño estilo color */
+    border: 5px dashed lightpink;
+    border-radius: 10px 50px 30px 5px;
+    border-block-color: red;
+    border-inline-color: blue;
+    border-inline-end-style: dotted;
+    border-inline-start-style: solid;
+    /* margen */
+    margin-inline: 100px;
+}
+
+.hijosdirectos>li{
+    background-color: rgba(251, 255, 0, 0.418);
+    color: blueviolet;
+}
+.hijosdirectos>li>b{
+    font-weight: 500;
+    color: black;
+}
