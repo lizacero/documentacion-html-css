@@ -119,3 +119,79 @@ img{
     font-weight: 500;
     color: black;
 }
+.hijosdescendientes b{
+    color: blue
+}
+.hermanos-siguientes~li{
+    background-color: red;
+}
+.hermano-abajo+li{
+    background-color: red;
+}
+
+/* Atributos */
+/* Permiten agregar estilos teniendo en cuenta los atributos de una etiqueta*/
+.selectores-atributos a[href] {
+    color: #ff8c09;
+    /* text decoration le quita el estilo a los enlaces */
+    text-decoration: none;
+}
+
+.selectores-atributos a[target="_blank"] {
+    font-weight: bold;
+}
+
+/* El comodin * busca todos los atributos que contengan la palabra a la que esta igualdado  */
+.selectores-atributos a[href*="w3schools"] {
+    font-size: 24px;
+}
+
+/* El comodin ^ busca los atributos que comiencen con la palabra a la que se le esta igualando */
+.selectores-atributos a[href^="#"] {
+    background-color: lightpink;
+    color: purple;
+}
+
+/* El comodin $ busca todos los atributos que terminen con lo que esta igualado */
+.selectores-atributos a[href$=".com/"] {
+    background-color: rgb(93, 96, 99);
+}
+
+/* El comodin ~  aplica el estilo si contiene la palabra si esta en una lista de palabras separadas por espacios */
+.selectores-atributos a[class~="cursos"] {
+    background-color: #093aff;
+}
+
+/* El comodin | busca las palabras que esten igualdas y que despues del texto pueda venir un guion medio y esta entre una lista de palabras separadas por espacio */
+.selectores-atributos a[class|="menu"] {
+    /* Estilo de la letra */
+    font-style: italic;
+}
+
+/* El selector universal le aplica los estilos a todos los elementos HTML que se tienen dentro del documento*/
+
+* {
+    /* Font-family cambia la tipografia */
+    font-family: sans-serif;
+}
+
+/* A todos los elementos dentro de la clase les aplica el estilo */
+
+.selector-universal * {
+    font-size: 24px;
+    color: darkorchid;
+}
+/* -----------------------AGRUPACION DE SELECTORES----------------------- */
+/* Agrupar selectores, se hace con la coma */
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea{
+    border-color: darkolivegreen;
+    border-width: 5px;
+    border-style: dashed;
+    background-color: lightgreen;
+    font-size: 20px;
+    /* Pone la etiqueta de tipo bloque es decir que ocupe todo el espacio */
+    display: block;
+    width: 300px;
+}
